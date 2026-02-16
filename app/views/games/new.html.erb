@@ -1,0 +1,16 @@
+<div class="container p-5">
+<h2>Longest-word game</h2>
+<ul class="list-unstyled d-flex flex-wrap mb-3">
+  <% @letters.each do |letter| %>
+    <li class="bg-dark text-white p-3 mb-2 rounded m-2"><%= letter %></li>
+  <% end %>
+</ul>
+<div class="form">
+  <form action="score" method="post" class="form-control mb-3" data-turbo="false">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <label for="answer" class="form-label mb-3">Your answer:</label>
+    <input type="text" id="answer" name="userAnswer" class="form-control mb-3">
+    <input type="submit" value="Play!" class="btn btn-dark">
+  </form>
+</div>
+</div>

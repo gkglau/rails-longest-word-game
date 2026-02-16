@@ -1,0 +1,10 @@
+<div class="container p-5">
+  <h2>Game Result</h2>
+
+  <p><strong>Your attempt:</strong> <%= @attempt %></p>
+  <p><strong>Score:</strong> <%= @result[:score].round(2) %></p>
+  <p><strong>Message:</strong> <%= @result[:message] %></p>
+  <p><strong>Time taken:</strong> <%= @result[:time].round(2) %> seconds</p>
+
+  <%= link_to "Play Again", new_path, class: "btn btn-dark mt-3" %>
+</div>
